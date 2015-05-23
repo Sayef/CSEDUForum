@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<header>
+	<sitename> CSEDU Forum </sitename>
+	<sitetagline> let questions be the first weapon of knowledge </sitetagline>
+	<signin_field> please sign in </signin_field>
+	<userid_field> user ID </userid_field>
+	<password_field> password </password_field>
+	<submit_value> signin </submit_value>
+	<new_account_field> create new nccount </new_account_field>
+</header>

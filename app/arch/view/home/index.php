@@ -1,8 +1,5 @@
-	<body>
-   		<div class="page-header">
-		<pre><h1>সিএসই ডিইউ ফোরাম<small> প্রশ্ন-ই হোক জ্ঞানার্জনের প্রথম হাতিয়ার  </small> </h1> </pre>
-		</div>
 
+	<div style = "position:fixed; left:0px; top: 200px; width: 100%; rgba(100, 252, 252, 0.4);">
 		<form action="Controller/signinstatus.php" style="width: 400px; margin: 0 auto; align="center"" method="post">
 			<fieldset> 
 			<legend> সাইন ইন  </legend>		
@@ -12,3 +9,4 @@
 			<pre> <a href="View/signup.php" style="text-decoration: none;">  নতুন একাউন্ট তৈরি করুন  </a> </pre>
 			 </fieldset> 
 		</form>
+	</div>

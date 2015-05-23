@@ -14,6 +14,10 @@
             require APP . 'arch/view/home/index.php';
             require APP . 'arch/view/template/footer.php';
         }
+        public function loadModels(){
+
+            require_once(APP . 'model/xml-model.php');
+        }
 
 
     }

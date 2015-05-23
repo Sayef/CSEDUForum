@@ -21,14 +21,20 @@
 	// set a constant that holds the project's "application" folder, like "/var/www/app".
 	define('APP', ROOT . 'app' . DIRECTORY_SEPARATOR);
 
+	//Global Variable For Language
+	$lang = "en";
+
 	// load application config (error reporting etc.)
 	require APP . 'arch/config/config.php';
 
 	// load application class
-	require APP . 'core/view.php';
+	
 	require APP . 'core/controller.php';
+	require APP . 'core/view.php';
+
 	// start the application
 	$app = new View();
+
 	
 ?>
 

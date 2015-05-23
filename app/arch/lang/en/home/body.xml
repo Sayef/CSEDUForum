@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<body>	
+	<signin_field> please sign in </signin_field>
+	<userid_field> user ID </userid_field>
+	<password_field> password </password_field>
+	<submit_value> signin </submit_value>
+	<new_account_field> create new nccount </new_account_field>
+</body>

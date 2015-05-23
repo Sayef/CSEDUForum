@@ -21,6 +21,7 @@ class View
         $this->splitUrl();
 
         // check for controller: no controller given ? then load start-page
+        echo $this->url_controller ."<br>";
         if (!$this->url_controller) {
 
             require APP . 'controller/home.php';
@@ -73,6 +74,7 @@ class View
             $url = trim($_GET['url'], '/');
             $url = filter_var($url, FILTER_SANITIZE_URL);
             $url = explode('/', $url);
+
 
             // Put URL parts into according properties
             // By the way, the syntax here is just a short form of if/else, called "Ternary Operators"
