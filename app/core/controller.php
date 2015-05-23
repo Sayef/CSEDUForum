@@ -2,36 +2,28 @@
 
 	class Controller
 	{
-		/**
-		* @var null Database Connection
-		*/
-		public $db = null;
-		/**
-		* @var null Model
-		*/
-		public $model = null;
-		/**
-		* Whenever controller is created, open a database connection too and load "the model".
-		*/
-		function __construct()
-		{
-				require_once('../../architecture/config/config.php');
 
-				$dbobj = DBConnector::initWithValue('localhost','root','itsmylife','FORUM');
-		
-			$this->loadModel();
-		}
-	
-		/**
-		* Loads the "model".
-		* @return object model
-		*/
-		public function loadModel()
-		{
-			require APP . '/model/model.php';
-			// create new "model" (and pass the database connection)
-			$this->model = new Model($this->db);
-		}
+	    /**
+	     * @var null dbobj
+	     */
+	    public $dbobj = null;
+
+	    /**
+	     * Whenever controller is created create a database connection using db-connector from libs/utility/db-connector.php in my case
+	     */
+	    function __construct()
+	    {
+	        	    
+		 /**
+         * @param object $dbobj is a database connection and load corresponding models
+         */
+         	require_once(APP . 'libs/utility/db-connector.php');
+
+            $this->dbobj = DBConnector::initWithValue(DB_HOST,DB_USER,DB_PASS,DB_NAME);
+
+          
+
+	    }
 
 	}
 ?>

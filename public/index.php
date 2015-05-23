@@ -1,25 +1,36 @@
 <!DOCTYPE HTML>
 <html>
-	<head> 
 
-	</head>
-	<body>
-		
-		
-		
-		<?php
-		define('ROOT',dirname(dirname(__FILE__)));
 
-		//$url = isset($_GET['url'])?$_GET['url']:null; //get the requested path
-		print(ROOT);
-		echo $ROOT." Bangladesh";
+<?php
+	/**
+	*  
+	*
+	* 
+	* @author Sayef
+	* 
+	*/
+	// set a constant that holds the project's folder path, like "/var/www/".
+	// DIRECTORY_SEPARATOR adds a slash to the end of the path
+	define('ROOT', dirname(__DIR__) . DIRECTORY_SEPARATOR);
+	//Set css, img, js files loaction
+	define('CSS', ROOT . 'public/css/');
+	define('JS', ROOT . 'public/js/');
+	define('IMG', ROOT . 'public/img/');
 
-				?>
-		
-		
+	// set a constant that holds the project's "application" folder, like "/var/www/app".
+	define('APP', ROOT . 'app' . DIRECTORY_SEPARATOR);
 
-	</body>
+	// load application config (error reporting etc.)
+	require APP . 'arch/config/config.php';
+
+	// load application class
+	require APP . 'core/view.php';
+	require APP . 'core/controller.php';
+	// start the application
+	$app = new View();
+	
+?>
+
+
 </html>
-
-
-
