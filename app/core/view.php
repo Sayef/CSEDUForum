@@ -5,6 +5,9 @@ class View
     /** @var null The controller */
     private $url_controller = null;
 
+    /** @var null Thw model */
+    private $url_model = null;
+
     /** @var null The method (of the above controller), often also named "action" */
     private $url_action = null;
 
@@ -27,7 +30,7 @@ class View
             require APP . 'controller/home.php';
             $page = new Home();
             $page->index();
-            $page->loadModels();
+
 
         } elseif (file_exists(APP . 'controller/' . $this->url_controller . '.php')) {
             // here we did check for controller: does such a controller exist ?
@@ -36,6 +39,7 @@ class View
             // example: if controller would be "car", then this line would translate into: $this->car = new car();
             require APP . 'controller/' . $this->url_controller . '.php';
             $this->url_controller = new $this->url_controller();
+
 
             // check for method: does such a method exist in the controller ?
             if (method_exists($this->url_controller, $this->url_action)) {

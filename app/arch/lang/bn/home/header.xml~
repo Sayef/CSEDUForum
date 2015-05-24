@@ -2,9 +2,4 @@
 <header>
 	<sitename> সিএসই ডিইউ ফোরাম </sitename>
 	<sitetagline> প্রশ্ন-ই হোক জ্ঞানার্জনের প্রথম হাতিয়ার </sitetagline>
-	<signin_field> সাইন ইন	</signin_field>
-	<userid_field>ইউসার আইডি </userid_field>
-	<password_field> পাসওয়ার্ড </password_field>
-	<submit_value> সাইন ইন </submit_value>
-	<new_account_field> নতুন একাউন্ট তৈরি করুন </new_account_field>
 </header>

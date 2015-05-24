@@ -3,29 +3,31 @@
 
 class XMLparser {
 
-		public static function my_xpath($file, $path){
-			//echo $path."<br>";
+		public function my_xpath($file, $path){
 			$token = strtok($path, "/");
 			$branch = simplexml_load_file($file);
+			$temp;
 			while (true)
 			{
-				//echo $branch->getName() . "<br>";
+				echo $branch->getName() . "<br>";
 
 				$token = strtok("/");
 				if($token===false){
 					if(count($branch)!==0) return "No value found in this path"."<br>";
-					return $branch;
+					return $temp;
 					break;
 				}
 				$flag = 0;
+				$temp = "";
 				foreach ($branch->children() as $child)
 				{
 
 					if($token == $child->getName()){
 						$branch = $child;
 						$flag = 1;
-						break;
+						//break;
 					}
+					if(count($branch)===0) $temp = $temp.$branch."<br>"; 
 				    
 				}
 				if($flag==0){
@@ -210,7 +212,20 @@ class XMLparser {
 
 			}
 		}
-	
+
+
+		/*
+		echo "<ul id= songlist >\n";
+		foreach ($mysongs as $songinfo):
+		$title=$songinfo->title;
+		$artist=$songinfo->artist;
+		$date=$songinfo['dateplayed'];
+		echo "<li><div class=title>".$title."</div><div class=artist>by ".$artist."</div><time>".$date."</time></li>\n";
+		endforeach;
+		echo "</ul>";
+		*/
+
+		
 	}
 
 	?> 

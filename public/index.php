@@ -18,22 +18,54 @@
 	define('JS', ROOT . 'public/js/');
 	define('IMG', ROOT . 'public/img/');
 
+
 	// set a constant that holds the project's "application" folder, like "/var/www/app".
 	define('APP', ROOT . 'app' . DIRECTORY_SEPARATOR);
 
 	//Global Variable For Language
-	$lang = "en";
+	$GLOBALS['lang'] = "en";
+
+	// load language file kept in app/arch/lang
+
+	require_once(APP.'arch/lang/lang-setter.php');
+	new LangSetter();
+			//Language change action
+	if(isset($_POST['changeLang'])){
+
+		$GLOBALS['lang'] = $_POST['lang'];  // Storing Selected lang In global Variable
+
+		$message = " Language Changed to: " . $GLOBALS['lang'] ;
+
+		echo "<script type='text/javascript'>alert('$message');</script>";  // Displaying Selected lang
+		
+		require_once(APP.'arch/lang/lang-setter.php');
+		new LangSetter();
+
+		//header('location: '. URL);
+		//unset($_POST['changeLang']);
+		
+	}	
+
+
+
 
 	// load application config (error reporting etc.)
 	require APP . 'arch/config/config.php';
-
 	// load application class
 	
 	require APP . 'core/controller.php';
 	require APP . 'core/view.php';
 
-	// start the application
-	$app = new View();
+
+
+	new Controller();
+
+	$app = new View($lang);
+
+
+
+
+
 
 	
 ?>
