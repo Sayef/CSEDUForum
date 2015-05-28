@@ -3,6 +3,8 @@
 
 
 <?php
+
+	session_start();
 	/**
 	*  
 	*
@@ -29,7 +31,7 @@
 
 	require_once(APP.'arch/lang/lang-setter.php');
 	new LangSetter();
-			//Language change action
+	//Language change action
 	if(isset($_POST['changeLang'])){
 
 		$GLOBALS['lang'] = $_POST['lang'];  // Storing Selected lang In global Variable
@@ -40,9 +42,6 @@
 		
 		require_once(APP.'arch/lang/lang-setter.php');
 		new LangSetter();
-
-		//header('location: '. URL);
-		//unset($_POST['changeLang']);
 		
 	}	
 

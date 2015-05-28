@@ -9,11 +9,6 @@
 	    public $dbobj = null;
 
 	    /**
-	    *	@var null xml-lang-model
-	    */
-	    public $lang_model = null;
-
-	    /**
 	     * Whenever controller is created create a database connection using db-connector from libs/utility/db-connector.php in my case
 	     */
 	    function __construct()

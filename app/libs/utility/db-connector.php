@@ -9,10 +9,9 @@ class DBConnector
 	private $username;
 	private $password;
 	private $dbname;
-	private $conn;
 
 
-	public function __cosntruct()
+	public function __construct()
 	{
 		$this->servername 	= 'localhost';
 		$this->username 	= 'root';
@@ -27,26 +26,28 @@ class DBConnector
 		$newobj->servername = $server;
 		$newobj->username 	= $user;
 		$newobj->password 	= $pass;
-		$newobj->dbname 	= $db;
+		$newobj->dbname 	= $db; 
 
 		return $newobj;
 	}
 
+	public function initConnection()
+	{
+		return new mysqli($this->servername, $this->username, $this->password, $this->dbname);
+	}
 
-	private function executeQuery($sql)
+
+	private function executeQuery($conn, $sql)
 	{
 
-		$conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
-		
-		
+	
 		if (!mysqli_set_charset($conn, "utf8")) {
 		printf("Error loading character set utf8: %s\n", mysqli_error($conn));
 		} else {
 		$success = mysqli_character_set_name($conn);
 		}
 
-		   
-
+		  
 		$result = null;
 
 		if ($conn->connect_error)
@@ -61,7 +62,7 @@ class DBConnector
 		return $result;
 	}
 
-	public function insertData($sql)
+	public function insertData($conn, $sql)
 	{
 		if($sql)
 		{
@@ -81,11 +82,11 @@ class DBConnector
 		}
 	}
 
-	public function deleteData($sql)
+	public function deleteData($conn, $sql)
 	{
 		if($sql)
 		{
-			$result = $this->executeQuery($sql);
+			$result = $this->executeQuery($conn, $sql);
 			if ($result)
 			{
 				echo "Data deleted successfully\n";
@@ -103,11 +104,11 @@ class DBConnector
 		}
 	}
 
-	public function selectData($sql)
+	public function selectData($conn, $sql)
 	{
 		if($sql)
 		{
-			$result = $this->executeQuery($sql);
+			$result = $this->executeQuery($conn, $sql);
 
 			return $result;
 		}
@@ -118,11 +119,11 @@ class DBConnector
 		}
 	}
 
-	public function updateData($sql)
+	public function updateData($conn, $sql)
 	{
 		if($sql)
 		{
-			$result = $this->executeQuery($sql);
+			$result = $this->executeQuery($conn, $sql);
 			if ($result)
 			{
 				echo "Success";

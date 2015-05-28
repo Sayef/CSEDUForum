@@ -24,12 +24,14 @@ class View
         $this->splitUrl();
 
         // check for controller: no controller given ? then load start-page
-        echo $this->url_controller ."<br>";
+        //echo $this->url_controller ."<br>";
         if (!$this->url_controller) {
 
             require APP . 'controller/home.php';
             $page = new Home();
+            $page->controlls();
             $page->index();
+            
 
 
         } elseif (file_exists(APP . 'controller/' . $this->url_controller . '.php')) {
@@ -54,7 +56,9 @@ class View
 
             } else {
                 if (strlen($this->url_action) == 0) {
-                    // no action defined: call the default index() method of a selected controller
+                    // no action defined: call the default index() and controlls() method of a selected controller
+                    
+                    $this->url_controller->controlls();
                     $this->url_controller->index();
                 }
                 else {
@@ -62,7 +66,8 @@ class View
                     
                 }
             }
-        } else {
+        } 
+        else {
             header('location: ' . URL . 'error');
         }
     }
