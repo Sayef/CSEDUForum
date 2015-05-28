@@ -55,4 +55,8 @@ define('DB_PASS', 'itsmylife');
 define('DB_NAME', 'FORUM');
 define('DB_CHARSET', 'utf8');
 define('DB_COLLATION','utf8_unicode_ci');
+
+
+
+
 ?>

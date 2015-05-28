@@ -33,17 +33,19 @@ class View
             $page->index();
             
 
-
-        } elseif (file_exists(APP . 'controller/' . $this->url_controller . '.php')) {
+        } else if (file_exists(APP . 'controller/' . $this->url_controller . '.php')) {
             // here we did check for controller: does such a controller exist ?
 
             // if so, then load this file and create this controller
             // example: if controller would be "car", then this line would translate into: $this->car = new car();
             require APP . 'controller/' . $this->url_controller . '.php';
             $this->url_controller = new $this->url_controller();
+            $this->url_controller->controlls();
+            $this->url_controller->index();
 
-
+        /*
             // check for method: does such a method exist in the controller ?
+            
             if (method_exists($this->url_controller, $this->url_action)) {
 
                 if (!empty($this->url_params)) {
@@ -69,6 +71,9 @@ class View
         } 
         else {
             header('location: ' . URL . 'error');
+        }
+
+        */
         }
     }
 
@@ -97,7 +102,7 @@ class View
             // Rebase array keys and store the URL params
             $this->url_params = array_values($url);
 
-            // for debugging. uncomment this if you have problems with the URL
+            //for debugging. uncomment this if you have problems with the URL
             //echo 'Controller: ' . $this->url_controller . '<br>';
             //echo 'Action: ' . $this->url_action . '<br>';
             //echo 'Parameters: ' . print_r($this->url_params, true) . '<br>';

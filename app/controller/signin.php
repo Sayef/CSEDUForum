@@ -16,12 +16,15 @@
         //require APP . 'arch/view//template/header.php';
         //require APP . 'arch/view/......?????/index.php';
         //require APP . 'arch/view/template/footer.php';
+
+        header('location: ' . "dashboard");
+        exit();
     }
 
     public function controlls()
     {
 
-		header('location: ' . "dashboard");
+		
 
     }
 }

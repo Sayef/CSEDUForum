@@ -1,6 +1,6 @@
 
 	<script type="text/javascript" src="<?php echo URL; ?> js/widgEditor.js"></script>
-	<div style = "position:fixed; left:20px; top: 80px; width: 50%; rgba(252, 252, 252, 0.4);">
+	<div style = "position:fixed; left:20px; top: 130px; width: 50%; rgba(252, 252, 252, 0.4);">
 		<h2>
 			Ask your valuable question
 		</h2>

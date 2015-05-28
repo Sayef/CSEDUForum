@@ -1,4 +1,5 @@
-<nav class="navbar navbar-default">
+
+<nav class="navbar navbar-default" style = "position: absolute; top: 0px; right: 150px; width: 65%; background-color: rgba(252, 252, 252, 0.4);">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">

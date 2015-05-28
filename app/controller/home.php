@@ -20,6 +20,7 @@
         public function controlls()
         {
 
+
             if(isset($_POST['signin']))
             {
        
@@ -34,12 +35,13 @@
                         {
 
                             header('location: ' . URL . "signin");
+                            exit();
+
                         }
                         else
                         {
                             $message = $GLOBALS['signinfailuremessage'];
-                            echo "<script type='text/javascript'>alert('$message');</script>";
-                            header('location: ' . URL);
+                            echo "<script type='text/javascript'>alert('$message');</script>";  // Displaying Selected lang
                         }
 
             }

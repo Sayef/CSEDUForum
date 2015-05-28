@@ -1,12 +1,12 @@
-<!DOCTYPE HTML>
-<html>
-
-
-
-
 <?php
 
-	session_start();
+    session_start();
+	if (!isset($_SESSION['lang'])) {
+
+    	$_SESSION['lang'] = "en";
+
+	}
+	
 	/**
 	*  
 	*
@@ -25,27 +25,12 @@
 
 	// set a constant that holds the project's "application" folder, like "/var/www/app".
 	define('APP', ROOT . 'app' . DIRECTORY_SEPARATOR);
-
 	//Global Variable For Language
-	$GLOBALS['lang'] = "en";
+	 
 
-	// load language file kept in app/arch/lang
 
-	require_once(APP.'arch/lang/lang-setter.php');
-	new LangSetter();
-	//Language change action
-	if(isset($_POST['changeLang'])){
+    // load language file kept in app/arch/lang
 
-		$GLOBALS['lang'] = $_POST['lang'];  // Storing Selected lang In global Variable
-
-		$message = " Language Changed to: " . $GLOBALS['lang'] ;
-
-		echo "<script type='text/javascript'>alert('$message');</script>";  // Displaying Selected lang
-		
-		require_once(APP.'arch/lang/lang-setter.php');
-		new LangSetter();
-		
-	}	
 
 
 
@@ -55,13 +40,10 @@
 	// load application class
 	
 	require APP . 'core/controller.php';
-	require APP . 'core/view.php';
-
-
-
 	new Controller();
 
-	$app = new View($lang);
+	require APP . 'core/view.php';
+	$app = new View();
 
 
 
@@ -72,4 +54,3 @@
 ?>
 
 
-</html>

@@ -1,5 +1,4 @@
 <?php
-
 Class LangSetter{
 
 
@@ -8,7 +7,7 @@ Class LangSetter{
 
 			require_once(APP . 'libs/utility/xml-parser.php');
 			$x_path = new XMLparser();
-			$lang = $GLOBALS['lang'];
+			$lang = $_SESSION['lang'];
 
 			//Header
 
@@ -30,8 +29,6 @@ Class LangSetter{
 
 			//sign up failure message
 			$GLOBALS['signinfailuremessage'] = $x_path->my_xpath(APP . "arch/lang/".$lang."/popupmessage/popupmessage.xml", "/popupmessage/signinerror");
-
-			
 
 
 		}
