@@ -1,9 +1,9 @@
-
-
-		<head> 
+	<head> 
 			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
 		    <link href= "<?php echo URL; ?>css/bootstrap.css" rel="stylesheet" >
-<!--
+
+
+
 			<style> 
 				body{
 			
@@ -12,17 +12,25 @@
 					background-size: cover; 
 				}
 			</style> 
--->
+
 			<title> <?php echo $GLOBALS['sitename']; ?> </title> 
-		</head>
 
-		<body>
+			<script src= " <?php echo URL;?>js/tinymce/tinymce.min.js"></script>
+		    <!-- Just be careful that you give correct path to your tinymce.min.js file, above is the default example -->
+		    <script>
+		        tinymce.init({selector:'textarea'});
+		    </script>
 
-			
+</head>
+
+
+<body> 
+
+
 	
    		<div style = "position: absolute; top: 0px; left: 0px; width: 100%; background-color: rgba(252, 252, 252, 0.4);">
-			<!--<h1> <?php echo $GLOBALS['sitename']; ?> </h1> 
-			<h4> <?php echo $GLOBALS['sitetagline']; ?> </h4> -->
+			<h1> <?php echo $GLOBALS['sitename']; ?> </h1> 
+			<h4> <?php echo $GLOBALS['sitetagline']; ?> </h4>
 
 		</div>
 		
