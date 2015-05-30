@@ -1,0 +1,11 @@
+<navbar>
+	<home>Home</home>
+	<category>Category</category>
+	<search_question>Search Questions</search_question>
+	<settings>Settings</settings>
+	<tags>Tags</tags>
+	<help>Help</help>
+	<questions> Questions </questions>
+	<submit> Submit </submit>
+
+</navbar>

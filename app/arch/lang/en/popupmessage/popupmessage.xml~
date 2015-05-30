@@ -1,3 +1,5 @@
 <popupmessage>
-	<signinerror> ID and Password didn't match. <br> Try again please.  </signinerror>
+	<signinerror> ID and Password didn't match. Try again please.  </signinerror>
+	<signuperror> Some fields are empty or email, user id already taken. Try again please.  </signinerror>
+	<signupsuccess> Signup Successful! Verify your account from email!  </signupsuccess>
 </popupmessage>

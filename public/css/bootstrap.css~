@@ -8,6 +8,17 @@
 
 
 
+.tagline{
+	top:100px; 
+	left:200px; 
+	width:800px; 
+	height:51px; 
+	color:white; 
+	position:absolute; 
+	text-align:center; 
+	background-color:black;
+}
+
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;

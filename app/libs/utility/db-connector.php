@@ -31,38 +31,43 @@ class DBConnector
 		return $newobj;
 	}
 
-	public function initConnection()
-	{
-		return new mysqli($this->servername, $this->username, $this->password, $this->dbname);
-	}
 
 
-	private function executeQuery($conn, $sql)
+	private function executeQuery($sql)
 	{
 
-	
+		$conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
+
+		//$sql = mysqli_escape_string($conn, $sql);
+
 		if (!mysqli_set_charset($conn, "utf8")) {
 		printf("Error loading character set utf8: %s\n", mysqli_error($conn));
 		} else {
 		$success = mysqli_character_set_name($conn);
 		}
 
+		
 		  
 		$result = null;
 
 		if ($conn->connect_error)
 		{
 		    die("Connection failed: " . $conn->connect_error);
+
+
 		}
 		//$result = $conn->query("set character_set_results='utf8';");
+
+
 		$result = $conn->query($sql);
+
 
 		$conn->close();
 
 		return $result;
 	}
 
-	public function insertData($conn, $sql)
+	public function insertData($sql)
 	{
 		if($sql)
 		{
@@ -82,11 +87,11 @@ class DBConnector
 		}
 	}
 
-	public function deleteData($conn, $sql)
+	public function deleteData($sql)
 	{
 		if($sql)
 		{
-			$result = $this->executeQuery($conn, $sql);
+			$result = $this->executeQuery($sql);
 			if ($result)
 			{
 				echo "Data deleted successfully\n";
@@ -104,11 +109,11 @@ class DBConnector
 		}
 	}
 
-	public function selectData($conn, $sql)
+	public function selectData($sql)
 	{
 		if($sql)
 		{
-			$result = $this->executeQuery($conn, $sql);
+			$result = $this->executeQuery($sql);
 
 			return $result;
 		}
@@ -119,11 +124,11 @@ class DBConnector
 		}
 	}
 
-	public function updateData($conn, $sql)
+	public function updateData($sql)
 	{
 		if($sql)
 		{
-			$result = $this->executeQuery($conn, $sql);
+			$result = $this->executeQuery($sql);
 			if ($result)
 			{
 				echo "Success";

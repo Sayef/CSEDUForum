@@ -1,0 +1,9 @@
+<navbar>
+	<home>হোম</home>
+	<category>ক্যাটাগরি</category>
+	<search_question>প্রশ্ন খুঁজুন</search_question>
+	<settings>সেটিংস</settings>
+	<tags>ট্যাগস</tags>
+	<help>সাহায্য</help>
+	<questions>প্রশ্নসমূহ </questions>
+</navbar>

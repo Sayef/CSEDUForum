@@ -1,17 +1,13 @@
 <?php
 	
 
-	function checkValidity($dbobj, $dbConnection, $unEscapedID, $unEscapedpass)
+	function checkValidity($dbobj,  $ID, $pass)
 	{
 
-		$ID = mysqli_escape_string($dbConnection, $unEscapedID);
-        $pass = mysqli_escape_string($dbConnection, $unEscapedpass);
+		$sql = "SELECT password FROM user_profile where id = '$ID';";
 
-
-		$sql = "SELECT password, name FROM user_profile where id = '$ID';";
-
-		$result = $dbobj->selectData($dbConnection, $sql);
-		
+		$result = $dbobj->selectData($sql);
+		if($result){
 
 			while($row = $result->fetch_assoc())
 			{
@@ -19,7 +15,8 @@
 					return true;
 				else return false;
 			}
-					
+		}
+
 	}
 
 

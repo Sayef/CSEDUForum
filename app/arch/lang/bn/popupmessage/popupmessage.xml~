@@ -1,3 +1,5 @@
 <popupmessage>
-	<signinerror> আইডি ও পাসওয়ার্ড মিলেনি ! <br> আবার চেষ্টা করুন।  </signinerror>
+	<signinerror> আইডি ও পাসওয়ার্ড মিলেনি ! আবার চেষ্টা করুন।  </signinerror>
+	<signuperror>কোন ফিল্ড খালি আছে অথবা এই ইউসার আইডি, ইমেইল নিয়ে নেয়া হয়েছে।  </signinerror>
+	<signupsuccess> সাইন আপ সফলভাবে সম্পন্ন হয়েছে। ইমেইল এ গিয়ে একাউন্ট ভেরিফিকেশন করুন।   </signupsuccess>
 </popupmessage>

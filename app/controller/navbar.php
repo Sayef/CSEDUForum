@@ -1,7 +1,6 @@
-
 <?php
 
-    class Home extends Controller
+    class NavBar extends Controller
     {
         /**
          * PAGE: index
@@ -12,9 +11,9 @@
         public function index()
         {
             // load views
-            require APP . 'arch/view//template/header.php';
-            require APP . 'arch/view/home/index.php';
-            require APP . 'arch/view/template/footer.php';
+            //require APP . 'arch/view//template/header.php';
+            //require APP . 'arch/view/home/index.php';
+            //require APP . 'arch/view/template/footer.php';
         }
 
         public function controlls()
@@ -27,9 +26,11 @@
                         $ID = $_POST['ID'];
                         $pass = $_POST['pass'];
 
+                        $dbConnection = $this->dbobj->initConnection();
+
                         require APP . 'model/signin-model.php';
 
-                        if(checkValidity($this->dbobj, $ID, $pass))
+                        if(checkValidity($this->dbobj, $dbConnection, $ID, $pass)==true)
                         {
 
                             header('location: ' . URL . "signin");
@@ -38,7 +39,7 @@
                         }
                         else
                         {
-                            $message = $GLOBALS['signinerror'];
+                            $message = $GLOBALS['signinfailuremessage'];
                             echo "<script type='text/javascript'>alert('$message');</script>";  // Displaying Selected lang
                         }
 

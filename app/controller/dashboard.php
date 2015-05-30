@@ -22,7 +22,7 @@
         public function controlls()
         {
 
-                
+                require APP . 'controller/navbar.php';
         }
        
 

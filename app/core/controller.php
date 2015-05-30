@@ -29,7 +29,7 @@
 
                 $_SESSION['lang'] = $_POST['lang'];  // Storing Selected lang In global Variable
 
-                $message = " Language Changed to: " . $_SESSION['lang'];;
+                $message = " Language Changed to: " . $_SESSION['lang'];
 
                 echo "<script type='text/javascript'>alert('$message');</script>";  // Displaying Selected lang
 

@@ -1,14 +1,18 @@
 
-
-
-	<div style = "position:fixed; left:0px; top: 200px; width: 100%; rgba(252, 252, 252, 0.4);">
-		<form action="" style="width: 400px; margin: 0 auto; align="center"" method="post">
+    <div class = "tagline">		
+		<h1 style = "font-family: 'Lobster', cursive; margin:auto; line-height:51px; vertical-align:middle;">   <?php echo $GLOBALS['sitetagline']; ?>  </h4>
+	</div>
+	<div style = "position:relative; left:0px; top: 200px; width: 100%; #000d1a;">		
+		<form action="" style="width: 400px; margin: 0 auto;" align="center"; method="post">
 			<fieldset> 
 			<legend> <?php echo $GLOBALS['signin_field']; ?> </legend>		
 			<pre> <?php echo $GLOBALS['userid_field']; ?>  	<input type="text" name="ID"></pre> 
 			<pre> <?php echo $GLOBALS['password_field']; ?> 	<input type="password" name="pass"></pre>	
 			<pre> 		<input type="submit" value="<?php echo $GLOBALS['submit_value']; ?>" name="signin"></pre>
-			<pre> <a href="www.google.com" style="text-decoration: none;">  <?php echo $GLOBALS['new_account_field']; ?> </a> </pre>
+			<pre> <a href="<?php echo URL . "signup";?>" style="text-decoration: none;">  <?php echo $GLOBALS['new_account_field']; ?> </a> </pre>
 			 </fieldset> 
 		</form>
 	</div>
+</div>
+
+ <div class="clearfooter"></div>
