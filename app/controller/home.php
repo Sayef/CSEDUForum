@@ -25,7 +25,10 @@
             {
        
                         $ID = $_POST['ID'];
+
+                    
                         $pass = $_POST['pass'];
+                        
 
                         require APP . 'model/signin-model.php';
 
@@ -41,6 +44,7 @@
                             $message = $GLOBALS['signinerror'];
                             echo "<script type='text/javascript'>alert('$message');</script>";  // Displaying Selected lang
                         }
+                        
 
             }
 

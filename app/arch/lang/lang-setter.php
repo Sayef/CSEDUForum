@@ -59,7 +59,7 @@ Class LangSetter{
 			$GLOBALS['help'] = $x_path->my_xpath(APP . "arch/lang/".$lang."/navbar/navbar.xml", "/navbar/help");
 			$GLOBALS['submit'] = $x_path->my_xpath(APP . "arch/lang/".$lang."/navbar/navbar.xml", "/navbar/submit");
 
-
+		
 			//ask questions values
 
 			$GLOBALS['ask_question'] = $x_path->my_xpath(APP . "arch/lang/".$lang."/dashboard/dashboard.xml", "/dashboard/ask_question");

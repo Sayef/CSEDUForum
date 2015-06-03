@@ -7,7 +7,7 @@
 			<fieldset> 
 			<legend> <?php echo $GLOBALS['signin_field']; ?> </legend>		
 			<pre> <?php echo $GLOBALS['userid_field']; ?>  	<input type="text" name="ID"></pre> 
-			<pre> <?php echo $GLOBALS['password_field']; ?> 	<input type="password" name="pass"></pre>	
+			<pre> <?php echo $GLOBALS['password_field']; ?> 	<input type="password" name="pass"></pre>
 			<pre> 		<input type="submit" value="<?php echo $GLOBALS['submit_value']; ?>" name="signin"></pre>
 			<pre> <a href="<?php echo URL . "signup";?>" style="text-decoration: none;">  <?php echo $GLOBALS['new_account_field']; ?> </a> </pre>
 			 </fieldset> 

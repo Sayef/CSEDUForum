@@ -41,7 +41,7 @@
 				}
 				.signupform{
 					top:200px; 
-					left:140px; 
+					left:100px; 
 					width:800px; 
 					height:100%; 
 					color:white; 
