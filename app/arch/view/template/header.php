@@ -64,7 +64,7 @@
 			</style> 
 
 
-			<title> <?php echo $GLOBALS['sitename']; ?> </title> 
+			<title> <?php echo $_SESSION['sitename']; ?> </title> 
 
 			<!--script for navigation menu bar-->
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -86,13 +86,13 @@
 					<a style = "text-decoration:none;"; href="<?php echo URL;?>" >  
 
 				   		<div style = "position: fixed; top: 0px; left: 0px; width: 100%; height: 55px;  background-color: #000d1a;">
-							<h1 style = "font-family: 'Russo One', sans-serif; margin: 0.5em 1.5em; line-height: 100%; font-size: 1.875em;"> <small style = "color: white"> <?php echo $GLOBALS['sitename']; ?> </small> </h1> 
+							<h1 style = "font-family: 'Russo One', sans-serif; margin: 0.5em 1.5em; line-height: 100%; font-size: 1.875em;"> <small style = "color: white"> <?php echo $_SESSION['sitename']; ?> </small> </h1> 
 						</div>
 
 					</a>
 					
 					
-					<div style = "position: fixed; right: 0px; width: 150px; height:25px; background-color: #000d1a;">
+					<div style = "position: fixed; top: 10px; right: 0px; width: 150px; height:25px; background-color: #000d1a;">
 					<!-- Changing language and reload page-->
 						<form action="" method="post" style="align: right">
 							<select name="lang">

@@ -35,6 +35,13 @@
                         if(checkValidity($this->dbobj, $ID, $pass))
                         {
 
+                            $data = array(
+                                                     
+                                 'userid'       => $ID
+                            
+                             );
+                            $this->session_data->addSession($data);    
+
                             header('location: ' . URL . "signin");
                             exit();
 
@@ -42,7 +49,7 @@
                         else
                         {
                             $message = $GLOBALS['signinerror'];
-                            echo "<script type='text/javascript'>alert('$message');</script>";  // Displaying Selected lang
+                            echo "<script type='text/javascript'>alert('$message');</script>";  // Displaying  error message
                         }
                         
 

@@ -14,7 +14,7 @@ class XMLparser {
 				$token = strtok("/");
 				if($token===false){
 					if(count($branch)!==0) return "No value found in this path"."<br>";
-					return $branch;
+					return (string)$branch;
 					break;
 				}
 				$flag = 0;

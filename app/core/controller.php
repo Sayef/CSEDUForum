@@ -9,6 +9,11 @@
 	    public $dbobj = null;
 
 	    /**
+	     * @var null  session data
+	     */
+	    public $session_data = null;
+
+	    /**
 	     * Whenever controller is created create a database connection using db-connector from libs/utility/db-connector.php in my case
 	     */
 	    function __construct()
@@ -19,6 +24,22 @@
          */
          	require_once(APP . 'libs/utility/db-connector.php');
             $this->dbobj = DBConnector::initWithValue(DB_HOST,DB_USER,DB_PASS,DB_NAME);
+
+           
+
+			require_once(APP . 'libs/utility/session.php'); 
+
+			$this->session_data = new Session("CSEDUForum", FALSE, 300, "home");
+			if(!isset($_SESSION['lang'])){
+				$data = array(
+			                                         
+			                     'lang'       => "en"
+			                
+			                 );
+			    $this->session_data->addSession($data);
+			}
+
+		
 
 
 

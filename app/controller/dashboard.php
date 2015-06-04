@@ -12,17 +12,24 @@
 
         public function index()
         {
-            // load views
-            require APP . 'arch/view//template/header.php';
-            require APP . 'arch/view//template/navbar.php';
-            require APP . 'arch/view/dashboard/index.php';
-            require APP . 'arch/view/template/footer.php';
+            // load views if signed in
+            if(isset($_SESSION['userid'])){
+                require APP . 'arch/view//template/header.php';
+                require APP . 'arch/view//template/navbar.php';
+                require APP . 'arch/view/dashboard/index.php';
+                require APP . 'arch/view/template/footer.php';
+            }
+            else{
+                header('location: ' . URL);
+                exit();
+            }
         }
 
         public function controlls()
         {
-
-                require APP . 'controller/navbar.php';
+            if(isset($_SESSION['userid'])){
+                 require APP . 'controller/navbar.php';
+             }
         }
        
 
