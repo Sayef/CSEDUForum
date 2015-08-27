@@ -32,11 +32,15 @@
 	require APP . 'arch/config/config.php';
 	// load application class
 	
+
+
 	require APP . 'core/controller.php';
 	new Controller();
 
 	require APP . 'core/view.php';
 	$app = new View();
+
+	
 
 
 

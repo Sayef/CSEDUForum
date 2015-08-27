@@ -67,14 +67,15 @@ class View
                     header('location: ' . URL . 'error');
                     
                 }
-            }
+            }*/
+
         } 
         else {
+
             header('location: ' . URL . 'error');
         }
 
-        */
-        }
+        
     }
 
     /**

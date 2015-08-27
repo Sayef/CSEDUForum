@@ -9,15 +9,23 @@
 */
 class Error extends Controller
 {
-/**
-* PAGE: index
-* This method handles the error page that will be shown when a page is not found
-*/
-public function index()
-{
-// load views
-require APP . 'arch/view/template/header.php';
-require APP . 'arch/view/error/index.php';
-require APP . 'arch/view/template/footer.php';
-}
+	/**
+	* PAGE: index
+	* This method handles the error page that will be shown when a page is not found
+	*/
+	public function index()
+	{
+		// load views
+		require APP . 'arch/view/template/header.php';
+		require APP . 'arch/view/template/error.php';
+		require APP . 'arch/view/template/footer.php';
+
+
+		
+	}
+	public function controlls()
+    {
+
+    }
+
 }

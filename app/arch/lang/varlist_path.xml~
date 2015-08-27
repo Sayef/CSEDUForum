@@ -6,5 +6,4 @@
 	<page>/navbar/navbar.xml</page> 
 	<page>/popupmessage/popupmessage.xml</page>
 	<page>/signup/signup.xml</page>
-	<page>/error/error.xml</page>
 </varlist_path>
