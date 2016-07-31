@@ -53,7 +53,7 @@ define('URL', URL_PROTOCOL . URL_DOMAIN . URL_SUB_FOLDER);
 define('DB_TYPE', 'mysql');
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
-define('DB_PASS', 'itsmylife');
+define('DB_PASS', 'password');
 define('DB_NAME', 'FORUM');
 define('DB_CHARSET', 'utf8');
 define('DB_COLLATION','utf8_unicode_ci');
