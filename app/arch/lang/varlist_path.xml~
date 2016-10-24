@@ -1,9 +1,0 @@
-<varlist_path>
-	<page>/dashboard/dashboard.xml</page>
-	<page>/home/body.xml</page>
-	<page>/home/footer.xml</page>
-	<page>/home/header.xml</page>
-	<page>/navbar/navbar.xml</page> 
-	<page>/popupmessage/popupmessage.xml</page>
-	<page>/signup/signup.xml</page>
-</varlist_path>
